@@ -41,5 +41,16 @@ class GameTest {
 		}
 		assertEquals(30, game.score());
 	}
+	
+	@Test
+	void testSpare() {
+		game.roll(7);
+		game.roll(3);
+		game.roll(4);
+		for (int i = 0; i<17;i++) {
+			game.roll(0);
+		}
+		assertEquals(18, game.score());
+	}
 
 }
